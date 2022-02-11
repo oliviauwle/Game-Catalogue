@@ -6,10 +6,9 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Latest(
-    val overview: String,
-    val title: String,
     val backgroundimage: String,
-    val id: Int
-    val name : String
-    val developer : String
+    val id: Int,
+    val name: String,
+    val description: String,
+    val released: String
 ) : Parcelable

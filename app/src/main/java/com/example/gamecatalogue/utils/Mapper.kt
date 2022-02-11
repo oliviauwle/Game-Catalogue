@@ -1,23 +1,24 @@
 package com.example.gamecatalogue.utils
 
 import com.example.gamecatalogue.network.response.LatestDetailResponse
-import com.example.gamecatalogue.network.response.LatestResponse
 import com.example.gamecatalogue.network.response.PopularDetailResponse
+import com.example.gamecatalogue.network.response.LatestResponse
+import com.example.gamecatalogue.network.response.PopularResponse
 import com.example.gamecatalogue.presentation.model.Latest
 import com.example.gamecatalogue.presentation.model.Popular
-import com.example.gamecatalogue.response.PopularResponse
 
 object Mapper {
-    fun toPopular(popularResponse: PopularResponse): List<Popular>{
+    fun toPopular(popularResponse: PopularResponse): List<Popular> {
         val populars: MutableList<Popular> = mutableListOf()
         var popular: Popular
         popularResponse.results?.forEach {
             it?.let { popularResponseItem ->
                 popular = Popular(
-                    overview = "",
                     name = popularResponseItem.name ?: "",
                     backgroundimage = popularResponseItem.backgroundimage ?: "",
-                    id = popularResponseItem.id ?: 0
+                    id = popularResponseItem.id ?: 0,
+                    released = popularResponseItem.released ?: "",
+                    description = popularResponseItem.description ?: ""
                 )
                 populars.add(popular)
             }
@@ -25,16 +26,17 @@ object Mapper {
         return populars
     }
 
-    fun toLatest(latestResponse: LatestResponse): List<Latest>{
+    fun toLatest(latestResponse: LatestResponse): List<Latest> {
         val latests: MutableList<Latest> = mutableListOf()
         var latest: Latest
         latestResponse.results?.forEach {
             it?.let { latestResponseItem ->
                 latest = Latest(
-                    overview = latestResponseItem"",
                     name = latestResponseItem.name ?: "",
                     backgroundimage = latestResponseItem.backgroundimage ?: "",
-                    id = latestResponseItem.id ?: 0
+                    id = latestResponseItem.id ?: 0,
+                    released = latestResponseItem.released ?: "",
+                    description = latestResponseItem.description ?: ""
                 )
                 latests.add(latest)
             }
@@ -42,22 +44,23 @@ object Mapper {
         return latests
     }
 
-    fun toPopularDetail(popularDetailResponse: PopularDetailResponse): Popular{
+    fun toPopularDetail(popularDetailResponse: PopularDetailResponse): Popular {
         return Popular(
-            overview = "",
+            released = popularDetailResponse.released ?: "",
             name = popularDetailResponse.name ?: "",
             backgroundimage = popularDetailResponse.backgroundimage ?: "",
             id = popularDetailResponse.id ?: 0,
-            developer = popularDetailResponse.developer ?:""
+            description = popularDetailResponse.description ?: ""
         )
     }
 
-    fun toLatestDetail(popularDetailResponse: LatestDetailResponse): Latest{
+    fun toLatestDetail(latestDetailResponse: LatestDetailResponse): Latest {
         return Latest(
-            overview = "",
-            name = popularDetailResponse.name ?: "",
-            backgroundimage = popularDetailResponse.backgroundimage ?: "",
-            id = popularDetailResponse.id ?: 0,
-            developer = popularDetailResponse.developer ?:""
+            released = latestDetailResponse.released ?: "",
+            name = latestDetailResponse.name ?: "",
+            backgroundimage = latestDetailResponse.backgroundimage ?: "",
+            id = latestDetailResponse.id ?: 0,
+            description = latestDetailResponse.description ?: ""
         )
+    }
 }

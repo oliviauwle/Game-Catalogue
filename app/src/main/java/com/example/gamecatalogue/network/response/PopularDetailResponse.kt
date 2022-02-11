@@ -4,14 +4,14 @@ package com.example.gamecatalogue.network.response
 import com.google.gson.annotations.SerializedName
 
 data class PopularDetailResponse(
-    @SerializedName("background_image")
+    @field:SerializedName("background_image")
     val backgroundimage: String?,
-    @SerializedName("id")
+    @field:SerializedName("id")
     val id: Int?,
-    @SerializedName("name")
+    @field:SerializedName("name")
     val name: String?,
-    @SerializedName("developer")
-    val developer: String?,
-    @SerializedName("overview")
-    val overview: String?
+    @field:SerializedName("released")
+    val released: String?,
+    @field:SerializedName("description")
+    val description: String?
 )

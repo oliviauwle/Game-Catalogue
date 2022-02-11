@@ -9,18 +9,18 @@ import com.example.gamecatalogue.databinding.ItemPopularBinding
 import com.example.gamecatalogue.presentation.model.Popular
 import com.example.gamecatalogue.utils.Const
 
-class PopularAdapter {
+class PopularAdapter(
     private val items: MutableList<Popular> = mutableListOf(),
     private val onItemClickedCallback: OnItemClickedCallback? = null
-    ) : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
+) : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
         private lateinit var binding: ItemPopularBinding
 
         inner class PopularViewHolder(private val binding: ItemPopularBinding) : RecyclerView.ViewHolder(binding.root) {
             fun bind(data: Popular) {
                 this.binding.apply {
                     Glide.with(root.context).load("${Const.baseImageUrl}${data.backgroundimage}").error(
-                        R.drawable.ic_baseline_cancel_24).into(imgPoster)
-                    popular.text = data.name
+                        R.drawable.ic_baseline_cancel_24).into(imgBackground)
+                    tvName.text = data.name
                     root.setOnClickListener {
                         onItemClickedCallback?.onItemClicked(data)
                     }

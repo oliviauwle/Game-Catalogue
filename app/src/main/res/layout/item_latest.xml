@@ -6,19 +6,19 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/mcvPoster"
+        android:id="@+id/mcvBackground"
         android:layout_width="200dp"
         android:layout_height="135dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/latestname"
+        app:layout_constraintEnd_toStartOf="@id/tvName"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="8dp"
         app:cardCornerRadius="8dp">
 
         <ImageView
-            android:id="@+id/imgPoster"
+            android:id="@+id/imgBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/ic_baseline_cancel_24"
@@ -27,13 +27,13 @@
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:id="@+id/latestname"
+        android:id="@+id/tvName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/mcvPoster"
+        app:layout_constraintStart_toEndOf="@id/mcvBackground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/mcvPoster"
-        app:layout_constraintBottom_toBottomOf="@id/mcvPoster"
+        app:layout_constraintTop_toTopOf="@id/mcvBackground"
+        app:layout_constraintBottom_toBottomOf="@id/mcvBackground"
         android:layout_marginEnd="16dp"
         tools:text="Game Name"
         android:textSize="16sp"

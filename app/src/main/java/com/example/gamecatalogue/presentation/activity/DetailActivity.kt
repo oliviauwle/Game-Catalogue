@@ -9,8 +9,8 @@ import com.bumptech.glide.Glide
 import com.example.gamecatalogue.R
 import com.example.gamecatalogue.databinding.ActivityDetailBinding
 import com.example.gamecatalogue.network.RemoteDataSource
-import com.example.gamecatalogue.network.response.LatestDetailResponse
 import com.example.gamecatalogue.network.response.PopularDetailResponse
+import com.example.gamecatalogue.network.response.LatestDetailResponse
 import com.example.gamecatalogue.presentation.model.Latest
 import com.example.gamecatalogue.presentation.model.Popular
 import com.example.gamecatalogue.utils.Const
@@ -83,21 +83,22 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setPopular(popular: Popular) {
         with(binding) {
-            supportActionBar?.name = popular.name
             Glide.with(root.context).load("${Const.baseImageUrl}${popular.backgroundimage}")
                 .error(R.drawable.ic_baseline_cancel_24
-                ).into(imgPoster)
-            latestname.text = popular.name
-            latestoverview.text = popular.overview
+                ).into(imgBackground)
+            tvName.text = popular.name
+            tvReleased.text = popular.released
+            tvDescription.text=popular.description
         }
     }
 
     private fun setLatest(latest: Latest) {
         with(binding) {
-            supportActionBar?.name = latest.name
-            Glide.with(root.context).load("${Const.baseImageUrl}${latest.backgroundimage}").error(R.drawable.ic_baseline_cancel_24).into(imgPoster)
-            latestname.text = latest.name
-            latestoverview.text = latest.overview
+
+            Glide.with(root.context).load("${Const.baseImageUrl}${latest.backgroundimage}").error(R.drawable.ic_baseline_cancel_24).into(imgBackground)
+            tvName.text = latest.name
+            tvReleased.text = latest.released
+            tvDescription.text=latest.description
         }
     }
 
@@ -105,5 +106,5 @@ class DetailActivity : AppCompatActivity() {
         popular = intent.getParcelableExtra(POPULAR_EXTRA)
         latest = intent.getParcelableExtra(LATEST_EXTRA)
     }
-    }
+
 }

@@ -1,10 +1,9 @@
-package com.example.gamecatalogue.response
+package com.example.gamecatalogue.network.response
 
 
 import com.google.gson.annotations.SerializedName
-import com.example.gamecatalogue.network.response.PopularItem
 
 data class PopularResponse(
-    @SerializedName("results")
-    val results: List<PopularItem?>
+    @field:SerializedName("results")
+    val results: List<PopularItem>?
 )

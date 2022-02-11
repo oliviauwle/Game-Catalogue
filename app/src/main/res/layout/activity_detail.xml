@@ -7,7 +7,7 @@
     tools:context=".presentation.activity.DetailActivity">
 
     <ImageView
-        android:id="@+id/imgPoster"
+        android:id="@+id/imgBackground"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="?attr/colorPrimary"
@@ -17,28 +17,55 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:textSize="24sp"
+        android:layout_margin="16dp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/tvOverview"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgPoster"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Games Name" />
+        app:layout_constraintTop_toBottomOf="@id/imgBackground"
+        tools:text="Games Name"/>
 
     <TextView
-        android:id="@+id/tvOverview"
-        android:layout_width="match_parent"
+        android:id="@+id/tvReleased"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        tools:text="10-10-2010"/>
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Description"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvReleased"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name"
-        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tortor blandit, consequat eros in, interdum mauris. Nulla tempor nunc quis ipsum euismod fringilla. Nullam vitae sapien at lectus accumsan venenatis quis a metus. Integer quam nunc, venenatis eu enim quis, bibendum viverra ante. Aenean et molestie tellus. Integer luctus eros at tellus pretium, non auctor nulla aliquet. Phasellus porta nunc ut dui viverra vehicula eu ut orci. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet orci ullamcorper, congue ligula in, vestibulum mi. In hac habitasse platea dictumst. Aliquam erat volutpat. Nam dignissim eros vitae ornare cursus. Vestibulum sodales nec arcu a sodales. Aliquam dapibus ex quam, sed efficitur erat commodo a." />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Description"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in purus id tellus elementum fermentum. Cras non rutrum libero, id commodo nibh. Curabitur mollis tellus congue nisi maximus lacinia. Morbi scelerisque congue ipsum ac elementum. Vivamus ornare metus lobortis, aliquam turpis a, dictum tortor. Donec mollis, odio eu condimentum lobortis, urna mi suscipit nibh, sed pharetra quam nisi vitae risus. Ut eu mollis magna. Nulla a facilisis ex. Fusce eros orci, sagittis eu dolor a, congue consectetur diam. Integer rutrum felis nec orci semper, ut pharetra mauris posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur iaculis dignissim nisi. Integer iaculis suscipit orci at mollis. Morbi lobortis, tortor eget facilisis tincidunt, ligula ligula condimentum tortor, nec dapibus mi metus sed leo"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReleased"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

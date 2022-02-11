@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/layout/activity_detail.xml" value="0.22" />
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/layout/activity_settings.xml" value="0.22" />
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/layout/fragment_latest.xml" value="0.1" />
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/layout/fragment_popular.xml" value="0.1" />
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/layout/item_latest.xml" value="0.3333333333333333" />
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/layout/item_menu.xml" value="0.1" />
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/layout/item_popular.xml" value="0.1" />
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3333333333333333" />
+        <entry key="..\:/Android project/Game Catalogue/app/src/main/res/menu/main_menu.xml" value="0.3333333333333333" />
         <entry key="..\:/Android project/Glogue/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.11574074074074074" />
         <entry key="..\:/Android project/Glogue/app/src/main/res/layout/activity_detail.xml" value="0.12047101449275362" />
         <entry key="..\:/Android project/Glogue/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
